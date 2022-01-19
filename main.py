@@ -1,7 +1,7 @@
 while True:
-    what=input ("Что делаем? (+, -, /, *):")
+    what=input("Что делаем? (+, -, /, *):")
     if what not in('+', '-', '/', '*'):
-        exit('Неверный символ')
+        exit('Неверная операция')
     input_value1 = float(input("Введите первое число = "));
     input_value2 = float(input("Введите второе число = "));
     if what == "+":
@@ -9,10 +9,10 @@ while True:
     elif what == "-":
         solution = input_value1 - input_value2
     elif what == "/":
-        if input_value1 != 0 and input_value2 != 0:
-            print(input_value1/input_value2)
+        if input_value2 == 0:
+            print("Ошибка - деление на 0!")
         else:
-            print("Ошибка деление на 0")
+            print(input_value1/input_value2)
     elif what == "*":
         solution = input_value1 * input_value2
         print(solution)
